@@ -1,137 +1,333 @@
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
   <title>Md Obaidul Haque</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Md Obaidul Haque - SEO Specialist & AWS Content Creator" />
-
-  <!-- Preload critical resources -->
-  <link rel="preload" href="images/me.png" as="image">
-  <link rel="preload" href="images/about-me.jpg" as="image">
-  <link rel="preload" href="assets/css/main.css" as="style">
-  <link rel="preload" href="assets/css/secondary.css" as="style">
-
-  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Cloud Engineer & AWS Content Creator" />
+  <meta property="og:image" content="https://dinnertimebucket.s3.amazonaws.com/digitalden.png">
   <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
-
-  <!-- Stylesheets -->
+  <!--#-->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/secondary.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+      <!--fond icon library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Font Awesome 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">-->
 
-  <!-- Google Analytics -->
+  <!--google analytics-->
+
   <!-- Google tag (gtag.js) -->
-</head>
 
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<!--
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      
+      background-color: #000; /* ব্যাকগ্রাউন্ড কালার */
+    }
+
+    #tsparticles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  </style>
+-->
+
+</head>
+<body class="is-preload">
 <body onload="updateCounter()">
-  <!-- Overlay -->
+<!-- Particles.js container -->
+ <!--
+  <div id="tsparticles"></div>
+
+<script>
+  tsParticles.load("tsparticles", {
+    autoPlay: true,
+    background: {
+      color: {
+        value: "#000"
+      },
+      opacity: 1
+    },
+    fullScreen: {
+      enable: true,
+      zIndex: -1
+    },
+    detectRetina: true,
+    fpsLimit: 120,
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "trail"
+        },
+        resize: {
+          enable: true
+        }
+      },
+      modes: {
+        trail: {
+          delay: 0.005,
+          pauseOnStop: true,
+          quantity: 5,
+          particles: {
+            color: {
+              value: "#ff0000",
+              animation: {
+                enable: true,
+                speed: 400,
+                sync: true
+              }
+            },
+            move: {
+              outModes: {
+                default: "destroy"
+              },
+              speed: 2
+            },
+            size: {
+              value: {
+                min: 1,
+                max: 5
+              },
+              animation: {
+                enable: true,
+                speed: 5,
+                sync: true,
+                startValue: "min",
+                destroy: "max"
+              }
+            }
+          }
+        }
+      }
+    },
+    particles: {
+      color: {
+        value: "#ff0000",
+        animation: {
+          h: {
+            enable: true,
+            speed: 50,
+            sync: false
+          }
+        }
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        outModes: {
+          default: "out"
+        }
+      },
+      number: {
+        value: 100,
+        density: {
+          enable: true,
+          width: 1920,
+          height: 1080
+        }
+      },
+      opacity: {
+        value: {
+          min: 0.3,
+          max: 0.8
+        },
+        animation: {
+          enable: true,
+          speed: 0.5
+        }
+      },
+      shape: {
+        type: "circle"
+      },
+      size: {
+        value: {
+          min: 1,
+          max: 3
+        },
+        animation: {
+          enable: true,
+          speed: 3
+        }
+      },
+      links: {
+        enable: true,
+        distance: 100,
+        color: "random",
+        opacity: 1,
+        width: 1
+      }
+    },
+    pauseOnBlur: true,
+    pauseOnOutsideViewport: true
+  });
+</script> -->
+
+<!-- End of particles.js container -->
+
+
+
   <div class="overlay"></div>
 
   <!-- Wrapper -->
-  <div id="wrapper">
-    <header id="header">
-      <div class="logo">
-        <!-- Image with explicit dimensions to prevent CLS -->
-        <img src="images/me.png" alt="My Icon" class="custom-icon" width="200" height="200">
-      </div>
-      <div class="content">
-        <div class="inner">
-          <h1 style="font-family: 'ZeldaFont', sans-serif;">Md Obaidul Islam</h1>
-          <p>SEO Specialist & AWS Content Creator</p>
-          <ul class="icons">
-            <li><a href="mailto:" target="_blank" class="icon far fa-envelope-open" title="Email"><span class="label">Email</span></a></li>
-            <li><a href="" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-            <li><a href="" target="_blank" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
-            <li><a href="#" target="_blank" class="icon brands fa-blogger" title="Blogger"><span class="label">Blogger</span></a></li>
-            <li><a href="" target="_blank" class="icon fas fa-file" title="CV"><span class="label">CV</span></a></li>
-          </ul>
+    <div id="wrapper">
+      
+      
+      <header id="header">
+        <div class="logo">
+          
+          <img src="images/me.png" alt="My Icon" class="custom-icon">
         </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#" target="_blank">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
+        <div class="content">
+          <div class="inner">
+            
+            <h1 style="font-family: 'ZeldaFont', sans-serif;">Md Obaidul Islam</h1>
+            <p>SEO Specialist & AWS Content Creator</p>
+            <ul class="icons">
+              <li><a href="mailto:" target="_blank"
+                class="icon far fa-envelope-open" title="Email"><span class="label">Email</span></a></li>
+              <li><a href="" target="_blank"
+                class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+              <!--<li><a href="" target="_blank" class="icon brands fa-youtube" title="Content"><span
+                class="label">YouTube</span></a></li>	-->
+             <!-- <li><a href="" target="_blank" class="icon fa-file-alt" title="Documentation"><span
+                class="label">Docs</span></a></li>		-->			
+              <li><a href="" target="_blank" class="icon brands fa-github" title="GitHub"><span
+                class="label">GitHub</span></a></li>
 
-    <!-- Main Content -->
-    <div id="main">
-      <article id="about">
-        <h1>About</h1>
-        <!-- Image with explicit dimensions to prevent CLS -->
-        <span class="image main"><img src="images/about-me.jpg" alt="About Me" width="600" height="400"></span>
-        <p>Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.</p>
-        <p>SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.</p>
-        <h3>Active Certifications:</h3>
-        <ul>
-          <li>Responsive Web-Design<a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
-          <li>Front End Developer<a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></li>
-          <li>JavaScript Algorithms and Data Structures<a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></li>
-          <li>Data Visualization<a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></li>
-          <li>Typing.com<a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></li>
-        </ul>
-      </article>
-
-      <!-- Contact Form -->
-      <article id="contact">
-        <h1>Contact</h1>
-        <p>This form leverages a serverless AWS architecture with integrated Generative AI. Learn how to <a href="" target="_blank" rel="noopener noreferrer">build it</a>.</p>
-        <form id="contact-form" method="post" action="#">
-          <div class="fields">
-            <div class="field half">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" required />
-            </div>
-            <div class="field half">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" rows="4" required></textarea>
-            </div>
+                <li>
+                  <a href="#" target="_blank" class="icon brands fa-blogger" title="Blogger">
+                      <span class="label">Blogger</span>
+                  </a>
+              </li>
+              
+              
+              <li><a href="" target="_blank" class="icon fas fa-file" title="CV"><span
+                class="label">CV</span></a></li>
+            </ul>
           </div>
-          <ul class="actions">
-            <li><input type="submit" value="Send Message" class="primary" /></li>
-            <li><input type="reset" value="Reset" /></li>
+        </div> 
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <!--<li><a href="#timeline">Timeline</a></li>-->
+            <!--<li><a href="#content">Content</a></li>-->
+           <!-- <li><a href="#Docs">Docs</a></li>-->
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
+       <!-- <li><a href="#elements">Elements</a></li> -->
           </ul>
-          <div id="form-message" class="form-message"></div>
-          <div class="spinner" id="spinner"></div>
-        </form>
-        <ul class="icons">
-          <li><a href="" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-      </article>
+        </nav>
+      </header>
+        </header>
+        <div id="main">
+          <article id="about">
+            <h1 class="">About</h1>
+            <span class="image main"><img src="images/about-me.png" alt="" /></span>
+            <p>Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.</p>
+            <p>SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.</p>
+            <h3>Active Certifications:</h3>
+              <ul>
+              <li>Responsive Web-Design<a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
+              <li>Front End Developar <a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></a></li>
+              <li>javascript algorithms-and-data-structures <a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></a> </li>
+              <li>data visualization <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></a></li>
+               <li>typing.com <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></a></li>
+               <!-- Begin: HubSpot Academy - SEO Badge -->
+<div class='academy-badge'>
+  <a href='https://app.hubspot.com/academy/achievements/4ngmx4kn/en/1/md-obaidul-haque/seo' title='SEO'>
+  <img src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/32b25a0196df4831b021f8b30f248b73.png' />
+  </a>
+  </div>
+  <!-- End: HubSpot Academy - SEO Badge -->
+              </ul>
+            <!--
+            <h3>Work Experience:</h3>
+            <ul>
+            <li>AWS Content Creator, QA (formerly Cloud Academy), 2023 - Present</li>	
+            <li>Account Manager, Cool Chile, 2017 - 2021</li>
+            <li>Immigration Lawyer, Duncan Lewis Solicitors, 2015 - 2016</li>
+            </ul>
+            
+            <h3>Education:</h3>
+            <ul>
+            <li></li>
+            </ul> -->
+          </article>
+        <!-- Contact -->
+        <article id="contact">
+          <h1 class="major">Contact</h1>
+          <p>This form leverages a serverless AWS architecture with integrated Generative AI. Learn how to <a href="" target="_blank" rel="noopener noreferrer">build it</a>.</p>
+          <form id="contact-form" method="post" action="#">
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send Message" class="primary" /></li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+            <div id="form-message" class="form-message"></div>
+            <div class="spinner" id="spinner"></div>
+          </form>
+          <ul class="icons">
+            <li><a href="" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          </ul> 
+        </article>
+
+
+        </div>
+
+      <!-- Footer -->
+        <footer id="footer">
+          
+                          <p class="copyright">Visits: <span id="hits"></span></p>
+<p class="copyright">&copy; Made with❤️|MD OBAIDUL HAQUE </p>
+
+        </footer>
+
     </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <p class="copyright">Visits: <span id="hits"></span></p>
-      <p class="copyright">&copy; Made with ❤️ | MD OBAIDUL HAQUE</p>
-    </footer>
-  </div>
-
-  <!-- Background -->
-  <div id="bg">
-    <div id="particles-js"></div>
-  </div>
+  <!-- BG -->
+    <div id="bg">
+      <div id="particles-js"></div>
+    </div>
 
   <!-- Scripts -->
-  <script src="assets/js/jquery.min.js" defer></script>
-  <script src="assets/js/browser.min.js" defer></script>
-  <script src="assets/js/breakpoints.min.js" defer></script>
-  <script src="assets/js/util.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/counter.js" defer></script>
+  <script type="text/javascript" src="assets/js/particles.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/counter.js"></script>
   <script type="text/javascript">
     particlesJS.load('particles-js', 'assets/config/particles-js.json', function() {});
   </script>
