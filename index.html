@@ -288,18 +288,18 @@
 
   <script>
     async function fetchPosts() {
-        const API_KEY = "AIzaSyCkhRBTA7bgTWYipL7mVwwgLAJvHvx_4Jk"; // তোমার API Key বসাও
-        const BLOG_ID = "2025/03/api-check.html"; // তোমার ব্লগের ID বসাও
-        const url = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
+        const API_KEY = "AIzaSyCkhRBTA7bgTWYipL7mVwwgLAJvHvx_4Jk"; // তোমার API Key
+        const BLOG_ID = "/2025/03/api-check.html"; // তোমার Blog ID
+        const url = `https://cors-anywhere.herokuapp.com/https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
 
         try {
-            const response = await fetch(url, {
-                mode: "cors", 
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
+            const response = await fetch(url);
             const data = await response.json();
+
+            if (!data.items) {
+                throw new Error("API Response এ পোস্ট পাওয়া যায়নি!");
+            }
+
             const posts = data.items;
             let output = "";
 
@@ -310,6 +310,7 @@
             document.getElementById("blog-posts").innerHTML = output;
         } catch (error) {
             console.error("পোস্ট লোড করতে সমস্যা হয়েছে:", error);
+            document.getElementById("blog-posts").innerHTML = "<p>❌ পোস্ট লোড করা যায়নি।</p>";
         }
     }
 
