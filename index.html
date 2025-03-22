@@ -20,11 +20,28 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      
+      background-color: #000; /* ব্যাকগ্রাউন্ড কালার */
+    }
+
+    #tsparticles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  </style>
 
 
 </head>
 <body class="is-preload">
-
+<body onload="updateCounter()">
 <!-- Particles.js container -->
  
   <div id="tsparticles"></div>
@@ -206,12 +223,12 @@
             <!--<li><a href="#content">Content</a></li>-->
            <!-- <li><a href="#Docs">Docs</a></li>-->
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
        <!-- <li><a href="#elements">Elements</a></li> -->
           </ul>
         </nav>
       </header>
-        
+        </header>
         <div id="main">
           <article id="about">
             <h1 class="">About</h1>
@@ -281,56 +298,9 @@
             <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
           </ul> 
         </article>
- <!--blog page-->
 
- <article id="blog">
-  <div id="blog-posts"></div>
-
-  <script>
-    async function fetchPosts() {
-        const API_KEY = "AIzaSyCkhRBTA7bgTWYipL7mVwwgLAJvHvx_4Jk"; // তোমার API Key
-        const BLOG_ID = "/2025/03/api-check.html"; // তোমার Blog ID
-        const url = `https://cors-anywhere.herokuapp.com/https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
-
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-
-            if (!data.items) {
-                throw new Error("API Response এ পোস্ট পাওয়া যায়নি!");
-            }
-
-            const posts = data.items;
-            let output = "";
-
-            posts.forEach(post => {
-                output += `<h2><a href="${post.url}" target="_blank">${post.title}</a></h2>`;
-            });
-
-            document.getElementById("blog-posts").innerHTML = output;
-        } catch (error) {
-            console.error("পোস্ট লোড করতে সমস্যা হয়েছে:", error);
-            document.getElementById("blog-posts").innerHTML = "<p>❌ পোস্ট লোড করা যায়নি।</p>";
-        }
-    }
-
-    fetchPosts();
-</script>
-
-
-</article>
-
-<!--blog page end-->
 
         </div>
-
-
-       
-
-        
-
-
-        
 
       <!-- Footer -->
         <footer id="footer">
