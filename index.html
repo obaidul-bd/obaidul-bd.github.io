@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
   <title>Md Obaidul Haque</title>
-  <meta charset="utf-8" />
-  <meta property="og:image" content="https://dinnertimebucket.s3.amazonaws.com/digitalden.png">
+ 
   <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
   <!--#-->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -21,28 +20,11 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      
-      background-color: #000; /* ব্যাকগ্রাউন্ড কালার */
-    }
-
-    #tsparticles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-      left: 0;
-    }
-  </style>
 
 
 </head>
 <body class="is-preload">
-<body onload="updateCounter()">
+
 <!-- Particles.js container -->
  
   <div id="tsparticles"></div>
@@ -224,12 +206,12 @@
             <!--<li><a href="#content">Content</a></li>-->
            <!-- <li><a href="#Docs">Docs</a></li>-->
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#" target="_blank">Blog</a></li>
+            <li><a href="#blog">Blog</a></li>
        <!-- <li><a href="#elements">Elements</a></li> -->
           </ul>
         </nav>
       </header>
-        </header>
+        
         <div id="main">
           <article id="about">
             <h1 class="">About</h1>
@@ -299,9 +281,55 @@
             <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
           </ul> 
         </article>
+ <!--blog page-->
 
+ <article id="blog">
+  <div id="blog-posts"></div>
+
+  <script>
+    async function fetchPosts() {
+        const API_KEY = "AIzaSyCkhRBTA7bgTWYipL7mVwwgLAJvHvx_4Jk"; // তোমার API Key বসাও
+        const BLOG_ID = "2025/03/api-check.html"; // তোমার ব্লগের ID বসাও
+        const url = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
+
+        try {
+            const response = await fetch(url, {
+                mode: "cors", 
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const data = await response.json();
+            const posts = data.items;
+            let output = "";
+
+            posts.forEach(post => {
+                output += `<h2><a href="${post.url}" target="_blank">${post.title}</a></h2>`;
+            });
+
+            document.getElementById("blog-posts").innerHTML = output;
+        } catch (error) {
+            console.error("পোস্ট লোড করতে সমস্যা হয়েছে:", error);
+        }
+    }
+
+    fetchPosts();
+</script>
+
+
+</article>
+
+<!--blog page end-->
 
         </div>
+
+
+       
+
+        
+
+
+        
 
       <!-- Footer -->
         <footer id="footer">
