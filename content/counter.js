@@ -17,7 +17,7 @@ function toggleLanguage() {
         title.textContent = 'এসইও স্পেশালিস্ট এবং এডব্লিউএস কন্টেন্ট নির্মাতা';
         myFooter.textContent = 'ওবায়দুলের দ্বারা তৈরী';
        
-        button.textContent = 'Show English';
+        button.textContent = 'English';
         currentLanguage = 'bn';
     } else {
         // ইংরেজি ভাষা
@@ -25,7 +25,7 @@ function toggleLanguage() {
         title.textContent = 'SEO Specialist & AWS Content Creator';
         myFooter.textContent = 'Made with❤️|MD OBAIDUL HAQUE';
        
-        button.textContent = 'বাংলা দেখুন';
+        button.textContent = 'বাংলা';
         currentLanguage = 'en';
     }
     changeLanguage(currentLanguage);
