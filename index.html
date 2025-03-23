@@ -1,16 +1,18 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
   <title>Md Obaidul Haque</title>
- 
+
   <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
   <!--#-->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/secondary.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-      <!--fond icon library -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <!--fond icon library -->
+
 
 
   <!--google analytics-->
@@ -24,8 +26,9 @@
     body {
       margin: 0;
       padding: 0;
-      
-      background-color: #000; /* ব্যাকগ্রাউন্ড কালার */
+
+      background-color: #000;
+      /* ব্যাকগ্রাউন্ড কালার */
     }
 
     #tsparticles {
@@ -37,220 +40,261 @@
       left: 0;
     }
   </style>
-
-
 </head>
-<body class="is-preload">
-<body onload="updateCounter()">
-<!-- Particles.js container -->
- 
-  <div id="tsparticles"></div>
 
-<script>
-  tsParticles.load("tsparticles", {
-    autoPlay: true,
-    background: {
-      color: {
-        value: "#000"
-      },
-      opacity: 1
-    },
-    fullScreen: {
-      enable: true,
-      zIndex: -1
-    },
-    detectRetina: true,
-    fpsLimit: 120,
-    interactivity: {
-      detectsOn: "window",
-      events: {
-        onHover: {
-          enable: true,
-          mode: "trail"
+<body class="is-preload">
+  <!-- Particles.js container -->
+  <div id="tsparticles"></div>
+  <script>
+    tsParticles.load("tsparticles", {
+      autoPlay: true,
+      background: {
+        color: {
+          value: "#000"
         },
-        resize: {
-          enable: true
-        }
+        opacity: 1
       },
-      modes: {
-        trail: {
-          delay: 0.005,
-          pauseOnStop: true,
-          quantity: 5,
-          particles: {
-            color: {
-              value: "#ff0000",
-              animation: {
-                enable: true,
-                speed: 400,
-                sync: true
-              }
-            },
-            move: {
-              outModes: {
-                default: "destroy"
+      fullScreen: {
+        enable: true,
+        zIndex: -1
+      },
+      detectRetina: true,
+      fpsLimit: 120,
+      interactivity: {
+        detectsOn: "window",
+        events: {
+          onHover: {
+            enable: true,
+            mode: "trail"
+          },
+          resize: {
+            enable: true
+          }
+        },
+        modes: {
+          trail: {
+            delay: 0.005,
+            pauseOnStop: true,
+            quantity: 5,
+            particles: {
+              color: {
+                value: "#ff0000",
+                animation: {
+                  enable: true,
+                  speed: 400,
+                  sync: true
+                }
               },
-              speed: 2
-            },
-            size: {
-              value: {
-                min: 1,
-                max: 5
+              move: {
+                outModes: {
+                  default: "destroy"
+                },
+                speed: 2
               },
-              animation: {
-                enable: true,
-                speed: 5,
-                sync: true,
-                startValue: "min",
-                destroy: "max"
+              size: {
+                value: {
+                  min: 1,
+                  max: 5
+                },
+                animation: {
+                  enable: true,
+                  speed: 5,
+                  sync: true,
+                  startValue: "min",
+                  destroy: "max"
+                }
               }
             }
           }
         }
-      }
-    },
-    particles: {
-      color: {
-        value: "#ff0000",
-        animation: {
-          h: {
-            enable: true,
-            speed: 50,
-            sync: false
+      },
+      particles: {
+        color: {
+          value: "#ff0000",
+          animation: {
+            h: {
+              enable: true,
+              speed: 50,
+              sync: false
+            }
           }
-        }
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        outModes: {
-          default: "out"
-        }
-      },
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          width: 1920,
-          height: 1080
-        }
-      },
-      opacity: {
-        value: {
-          min: 0.3,
-          max: 0.8
         },
-        animation: {
+        move: {
           enable: true,
-          speed: 0.5
-        }
-      },
-      shape: {
-        type: "circle"
-      },
-      size: {
-        value: {
-          min: 1,
-          max: 3
+          speed: 2,
+          direction: "none",
+          outModes: {
+            default: "out"
+          }
         },
-        animation: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            width: 1920,
+            height: 1080
+          }
+        },
+        opacity: {
+          value: {
+            min: 0.3,
+            max: 0.8
+          },
+          animation: {
+            enable: true,
+            speed: 0.5
+          }
+        },
+        shape: {
+          type: "circle"
+        },
+        size: {
+          value: {
+            min: 1,
+            max: 3
+          },
+          animation: {
+            enable: true,
+            speed: 3
+          }
+        },
+        links: {
           enable: true,
-          speed: 3
+          distance: 100,
+          color: "random",
+          opacity: 1,
+          width: 1
         }
       },
-      links: {
-        enable: true,
-        distance: 100,
-        color: "random",
-        opacity: 1,
-        width: 1
-      }
-    },
-    pauseOnBlur: true,
-    pauseOnOutsideViewport: true
-  });
-</script> 
-
-<!-- End of particles.js container -->
-
-
-
+      pauseOnBlur: true,
+      pauseOnOutsideViewport: true
+    });
+  </script>
+  <!-- End of particles.js container -->
   <div class="overlay"></div>
-
   <!-- Wrapper -->
-    <div id="wrapper">
-      
-      
-      <header id="header">
-        <div class="logo">
-          
-          <img src="images/me.png" alt="My Icon" class="custom-icon">
-        </div>
-        <div class="content">
-          <div class="inner">
-            
-            <h1 style="font-family: 'ZeldaFont', sans-serif;">Md Obaidul Islam</h1>
-            <p>SEO Specialist & AWS Content Creator</p>
-            <ul class="icons">
-              <li><a href="mailto:" target="_blank"
-                class="icon far fa-envelope-open" title="Email"><span class="label">Email</span></a></li>
-              <li><a href="" target="_blank"
-                class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-              <!--<li><a href="" target="_blank" class="icon brands fa-youtube" title="Content"><span
-                class="label">YouTube</span></a></li>	-->
-             <!-- <li><a href="" target="_blank" class="icon fa-file-alt" title="Documentation"><span
-                class="label">Docs</span></a></li>		-->			
-              <li><a href="" target="_blank" class="icon brands fa-github" title="GitHub"><span
-                class="label">GitHub</span></a></li>
-
-                <li>
-                  <a href="#" target="_blank" class="icon brands fa-blogger" title="Blogger">
-                      <span class="label">Blogger</span>
-                  </a>
+  <div id="wrapper">
+    <header id="header">
+      <div class="logo">
+        <img src="images/me.png" alt="My Icon" class="custom-icon">
+      </div>
+      <div class="content">
+        <div class="inner">
+          <h1 id="myName" style="font-family: 'ZeldaFont', sans-serif;"></h1>
+          <p id="myTitle"></p>
+          <ul class="icons">
+            <ul class="buttons">
+              <li>
+                <button onclick="window.location.href='mailto:your-email@example.com'" title="Email">
+                  <!-- SVG Email Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-arrow-up" viewBox="0 0 16 16">
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4.5a.5.5 0 0 1-1 0V5.383l-7 4.2-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-1.99zm1 7.105 4.708-2.897L1 5.383zM1 4v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" />
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.354 1.25 1.25a.5.5 0 0 1-.708.708L13 12.207V14a.5.5 0 0 1-1 0v-1.717l-.28.305a.5.5 0 0 1-.737-.676l1.149-1.25a.5.5 0 0 1 .722-.016" />
+                  </svg>
+                </button>
               </li>
-              
-              
-              <li><a href="" target="_blank" class="icon fas fa-file" title="CV"><span
-                class="label">CV</span></a></li>
+              <li>
+                <button onclick="window.location.href='https://www.linkedin.com/in/yourprofile'" title="LinkedIn">
+                  <!-- SVG LinkedIn Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button onclick="window.location.href='https://github.com/'" title="GitHub">
+                  <!-- SVG github Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-github" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button onclick="window.location.href='resune.pdf'" title="Resume">
+                  <!-- SVG resume Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755" />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button onclick="window.location.href='blog'" title="blogger">
+                  <!-- SVG blog Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755" />
+                  </svg>
+                </button>
+              </li>
+
             </ul>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <!--<li><a href="#timeline">Timeline</a></li>-->
+          <!--<li><a href="#content">Content</a></li>-->
+          <!-- <li><a href="#Docs">Docs</a></li>-->
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" target="_blank">Blog</a></li>
+          <li>
+            <div class="language-selector">
+              <button id="languageButton" onclick="toggleLanguage()"></button>
+            </div>
+          </li>
+          <!-- <li><a href="#elements">Elements</a></li> -->
+        </ul>
+      </nav>
+    </header>
+   
+    <div id="main">
+      <article id="about">
+        <h1 class="">About</h1>
+        <span class="image main"><img src="images/about-me.png" alt="" /></span>
+        <p>Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience
+          helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and
+          developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.
+        </p>
+        <p>SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors.
+          I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so
+          that your site gets good results in the long-time.</p>
+        <h3>Active Certifications:</h3>
+        <ul>
+          <li>Responsive Web-Design<a
+              href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing"
+              target="_blank">🔗</a></li>
+          <li>Front End Developar <a
+              href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing"
+              target="_blank">🔗</a></a></li>
+          <li>javascript algorithms-and-data-structures <a
+              href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing"
+              target="_blank">🔗</a></a> </li>
+          <li>data visualization <a
+              href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing"
+              target="_blank">🔗</a></a></li>
+          <li>typing.com <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing"
+              target="_blank">🔗</a></a></li>
+          <!-- Begin: HubSpot Academy - SEO Badge -->
+          <div class='academy-badge'>
+            <a href='https://app.hubspot.com/academy/achievements/4ngmx4kn/en/1/md-obaidul-haque/seo' title='SEO'>
+              <img
+                src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/32b25a0196df4831b021f8b30f248b73.png' />
+            </a>
           </div>
-        </div> 
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <!--<li><a href="#timeline">Timeline</a></li>-->
-            <!--<li><a href="#content">Content</a></li>-->
-           <!-- <li><a href="#Docs">Docs</a></li>-->
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" target="_blank">Blog</a></li>
-       <!-- <li><a href="#elements">Elements</a></li> -->
-          </ul>
-        </nav>
-      </header>
-        </header>
-        <div id="main">
-          <article id="about">
-            <h1 class="">About</h1>
-            <span class="image main"><img src="images/about-me.png" alt="" /></span>
-            <p>Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.</p>
-            <p>SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.</p>
-            <h3>Active Certifications:</h3>
-              <ul>
-              <li>Responsive Web-Design<a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
-              <li>Front End Developar <a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></a></li>
-              <li>javascript algorithms-and-data-structures <a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></a> </li>
-              <li>data visualization <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></a></li>
-               <li>typing.com <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></a></li>
-               <!-- Begin: HubSpot Academy - SEO Badge -->
-<div class='academy-badge'>
-  <a href='https://app.hubspot.com/academy/achievements/4ngmx4kn/en/1/md-obaidul-haque/seo' title='SEO'>
-  <img src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/32b25a0196df4831b021f8b30f248b73.png' />
-  </a>
-  </div>
-  <!-- End: HubSpot Academy - SEO Badge -->
-              </ul>
-            <!--
+          <!-- End: HubSpot Academy - SEO Badge -->
+        </ul>
+        <!--
             <h3>Work Experience:</h3>
             <ul>
             <li>AWS Content Creator, QA (formerly Cloud Academy), 2023 - Present</li>	
@@ -262,71 +306,77 @@
             <ul>
             <li></li>
             </ul> -->
-          </article>
-        <!-- Contact -->
-        <article id="contact">
-          <h1 class="major">Contact</h1>
-          <p>This form leverages a serverless AWS architecture with integrated Generative AI. Learn how to <a href="" target="_blank" rel="noopener noreferrer">build it</a>.</p>
-          <form id="contact-form" method="post" action="#">
-            <div class="fields">
-              <div class="field half">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="field half">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4"></textarea>
-              </div>
+      </article>
+      <!-- Contact -->
+      <article id="contact">
+        <h1 class="major">Contact</h1>
+        <p>This form leverages a serverless AWS architecture with integrated Generative AI. Learn how to <a href=""
+            target="_blank" rel="noopener noreferrer">build it</a>.</p>
+        <form id="contact-form" method="post" action="#">
+          <div class="fields">
+            <div class="field half">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
             </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send Message" class="primary" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-            <div id="form-message" class="form-message"></div>
-            <div class="spinner" id="spinner"></div>
-          </form>
-          <ul class="icons">
-            <li><a href="" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+            <div class="field half">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="4"></textarea>
+            </div>
+          </div>
+          <ul class="actions">
+            <li><input type="submit" value="Send Message" class="primary" /></li>
+            <li><input type="reset" value="Reset" /></li>
+          </ul>
+          <div id="form-message" class="form-message"></div>
+          <div class="spinner" id="spinner"></div>
+        </form>
+        <ul class="icons">
+          <li><a href="" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"><span
+                class="label">LinkedIn</span></a></li>
 
-            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          </ul> 
-        </article>
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+      </article>
 
-
-        </div>
-
-      <!-- Footer -->
-        <footer id="footer">
-          
-                          <p class="copyright">Visits: <span id="hits"></span></p>
-<p class="copyright">&copy; Made with❤️|MD OBAIDUL HAQUE </p>
-
-        </footer>
 
     </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+      <p class="copyright"><span id="hits"></span></p>
+      <p id="myFooter" class="copyright"></p>
+
+    </footer>
+
+  </div>
 
   <!-- BG -->
-    <div id="bg">
-      <div id="particles-js"></div>
-    </div>
+  <div id="bg">
+    <div id="particles-js"></div>
+  </div>
 
   <!-- Scripts -->
-  <script type="text/javascript" src="assets/js/particles.min.js"></script>
+  <!--<script type="text/javascript" src="assets/js/particles.min.js"></script> -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
+  <!--<script src="assets/js/util.js"></script>-->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/counter.js"></script>
+  <!-- <script src="assets/js/counter.js"></script>-->
   <script type="text/javascript">
-    particlesJS.load('particles-js', 'assets/config/particles-js.json', function() {});
+    particlesJS.load('particles-js', 'assets/config/particles-js.json', function () { });
   </script>
+
+
+  <script src="content/counter.js"></script>
 </body>
+
 </html>
