@@ -13,7 +13,7 @@
   </noscript>
   <!--fond icon library -->
 
-
+  <link rel="stylesheet" href="assets/config/strl.css" />
 
   <!--google analytics-->
 
@@ -208,25 +208,18 @@
                   </svg>
                 </button>
               </li>
-              <li>
-                <button onclick="window.location.href='blog'" title="blogger">
-                  <!-- SVG blog Icon -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755" />
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <div class="language-selector">
-                  <button id="languageButton" onclick="toggleLanguage()"></button>
-                </div>
-              </li>
+
+
 
             </ul>
+
+            <div id="languageSelector" class="language-selector">
+              <button id="languageButton" onclick="toggleLanguage()"></button>
+            </div>
+
         </div>
       </div>
+
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -250,13 +243,24 @@
         <p id="about-paragraph1"></p>
         <p id="about-paragraph2"></p>
         <h3 id="certifications-title"></h3>
+        <ul>
+          <li>
+            <p>Content Optimization</p>
+            <div class="slide-container">
+              <img src="images/image.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">Your Hidden Content</div>
+            </div>
+          </li>
+        </ul>
         <ul id="certifications-list"></ul>
       </article>
       <!-- Contact -->
       <article id="contact">
         <h1 class="major">Contact</h1>
-        <p>If you have any questions, feel free to ask. I am ready to answer your questions! <a href="https://web.whatsapp.com/send/?phone=01783437065&text=Hi%2C+I%27m+Obaidul&type=phone_number&app_absent=0"
-            target="_blank" rel="noopener noreferrer">, <img src="images/whatsapp.gif" height="20px" width="20px"></a>.</p>
+        <p>If you have any questions, feel free to ask. I am ready to answer your questions! <a
+            href="https://web.whatsapp.com/send/?phone=01783437065&text=Hi%2C+I%27m+Obaidul&type=phone_number&app_absent=0"
+            target="_blank" rel="noopener noreferrer">, <img src="images/whatsapp.gif" height="20px" width="20px"></a>.
+        </p>
         <form action="https://formcarry.com/s/nezeemXsz7a" method="POST" enctype="multipart/form-data">
 
           <div class="formcarry-block">
@@ -266,13 +270,12 @@
 
           <div class="formcarry-block">
             <label for="fc-generated-1-email">Your Email Address</label>
-            <input type="email" name="email" id="fc-generated-1-email"  />
+            <input type="email" name="email" id="fc-generated-1-email" />
           </div>
 
           <div class="formcarry-block">
             <label for="fc-generated-1-message">Your message</label>
-            <textarea name="message" name="message" id="fc-generated-1-message"
-             ></textarea>
+            <textarea name="message" name="message" id="fc-generated-1-message"></textarea>
           </div>
 
           <div id="submit" class="formcarry-block">

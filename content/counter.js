@@ -41,7 +41,7 @@ function toggleLanguage() {
             </div>
         `;
 
-        button.textContent = 'English';
+        button.textContent = 'ᴇɴ';
         currentLanguage = 'bn';
     } else {
         // ইংরেজি ভাষা
@@ -67,7 +67,7 @@ function toggleLanguage() {
                    </div>
                `;
 
-        button.textContent = 'বাংলা';
+        button.textContent = '🇧🇳';
         currentLanguage = 'en';
     }
     changeLanguage(currentLanguage);
