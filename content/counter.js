@@ -1,7 +1,7 @@
 let currentLanguage = 'bn';
 
-window.onload = function() {
-  toggleLanguage(); // পেজ লোড হলে ডিফল্ট কন্টেন্ট লোড
+window.onload = function () {
+    toggleLanguage(); // পেজ লোড হলে ডিফল্ট কন্টেন্ট লোড
 }
 
 function toggleLanguage() {
@@ -10,12 +10,12 @@ function toggleLanguage() {
     const myFooter = document.getElementById('myFooter');
     const button = document.getElementById('languageButton');
 
-        // About Section Content
-        const abtitle = document.getElementById('about-title');
-        const paragraph1 = document.getElementById('about-paragraph1');
-        const paragraph2 = document.getElementById('about-paragraph2');
-        const certificationsTitle = document.getElementById('certifications-title');
-        const certificationsList = document.getElementById('certifications-list');
+    // About Section Content
+    const abtitle = document.getElementById('about-title');
+    const paragraph1 = document.getElementById('about-paragraph1');
+    const paragraph2 = document.getElementById('about-paragraph2');
+    const certificationsTitle = document.getElementById('certifications-title');
+    const certificationsList = document.getElementById('certifications-list');
 
     if (currentLanguage === 'en') {
         // বাংলা ভাষা
@@ -40,7 +40,7 @@ function toggleLanguage() {
                 </a>
             </div>
         `;
-       
+
         button.textContent = 'English';
         currentLanguage = 'bn';
     } else {
@@ -49,12 +49,12 @@ function toggleLanguage() {
         title.textContent = 'SEO Specialist & AWS Content Creator';
         myFooter.textContent = 'Made with❤️|MD OBAIDUL HAQUE';
 
-               // English Content
-               abtitle.textContent = 'About';
-               paragraph1.innerHTML = `Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.`;
-               paragraph2.innerHTML = `SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.`;
-               certificationsTitle.textContent = 'Active Certifications:';
-               certificationsList.innerHTML = `
+        // English Content
+        abtitle.textContent = 'About';
+        paragraph1.innerHTML = `Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.`;
+        paragraph2.innerHTML = `SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.`;
+        certificationsTitle.textContent = 'Active Certifications:';
+        certificationsList.innerHTML = `
                    <li>Responsive Web-Design <a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
                    <li>Front End Developer <a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></li>
                    <li>Javascript Algorithms and Data Structures <a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></li>
@@ -66,7 +66,7 @@ function toggleLanguage() {
                        </a>
                    </div>
                `;
-       
+
         button.textContent = 'বাংলা';
         currentLanguage = 'en';
     }
