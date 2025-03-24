@@ -35,9 +35,7 @@ function toggleLanguage() {
             <li>ডেটা ভিজ্যুয়ালাইজেশন <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></li>
             <li>টাইপিং.কম <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></li>
             <div class='academy-badge'>
-                <a href='https://app.hubspot.com/academy/achievements/4ngmx4kn/en/1/md-obaidul-haque/seo' title='SEO'>
-                    <img src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/32b25a0196df4831b021f8b30f248b73.png' />
-                </a>
+               
             </div>
         `;
 
@@ -61,9 +59,7 @@ function toggleLanguage() {
                    <li>Data Visualization <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></li>
                    <li>Typing.com <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></li>
                    <div class='academy-badge'>
-                       <a href='https://app.hubspot.com/academy/achievements/4ngmx4kn/en/1/md-obaidul-haque/seo' title='SEO'>
-                           <img src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/32b25a0196df4831b021f8b30f248b73.png' />
-                       </a>
+                       
                    </div>
                `;
 
