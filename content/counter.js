@@ -35,7 +35,7 @@ function toggleLanguage() {
     <div class="slide-container">  
       <img src="images/content-optimization.png" alt="স্লাইড ইমেজ" class="slide-image">  
       <div class="slide-overlay">  
-        <p class="skill">দক্ষতা:</p>  
+        <p class="skill">দক্ষতা</p>  
         <ul>  
           <li>কনটেন্ট অডিট</li>  
           <li>কনটেন্ট পুনঃব্যবহার</li>  
@@ -59,7 +59,7 @@ function toggleLanguage() {
     <div class="slide-container">
       <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
       <div class="slide-overlay">
-        <p class="skill">দক্ষতা:</p>
+        <p class="skill">দক্ষতা</p>
         <ul>
           <li>সার্ভে ফর্ম তৈরি করুন</li>
           <li>ট্রিবিউট পেজ তৈরি করুন</li>
@@ -77,7 +77,7 @@ function toggleLanguage() {
     <div class="slide-container">
       <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
       <div class="slide-overlay">
-        <p class="skill">দক্ষতা:</p>
+        <p class="skill">দক্ষতা</p>
         <ul>
           <li>প্যালিনড্রোম চেকার তৈরি করুন</li>
           <li>রোমান নাম্বার কনভার্টার তৈরি করুন</li>
@@ -95,7 +95,7 @@ function toggleLanguage() {
     <div class="slide-container">
       <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
       <div class="slide-overlay">
-        <p class="skill">দক্ষতা:</p>
+        <p class="skill">দক্ষতা</p>
         <ul>
           <li>র্যান্ডম কোট মেশিন তৈরি করুন</li>
           <li>মার্কডাউন প্রিভিউয়ার তৈরি করুন</li>
@@ -113,7 +113,7 @@ function toggleLanguage() {
     <div class="slide-container">
       <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
       <div class="slide-overlay">
-        <p class="skill">দক্ষতা:</p>
+        <p class="skill">দক্ষতা</p>
         <ul>
           <li>বার চার্ট দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
           <li>স্ক্যাটারপ্লট গ্রাফ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
@@ -142,14 +142,35 @@ function toggleLanguage() {
         paragraph1.innerHTML = `Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.`;
         paragraph2.innerHTML = `SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.`;
         certificationsTitle.textContent = 'Active Certifications:';
-        certificationsList.innerHTML = `<ul>
+        certificationsList.innerHTML = ` 
+        <ul>
+          <li>
+            <p>Complete SEO</p>
+            <div class="slide-container">
+              <img src="images/Hubspot-Academy-SEO.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
+              <li>SEO Basics</li>
+              <li>On Page and Technical SEO</li>
+              <li>Keyword Research for SEO</li>
+              <li>Link Building for SEO: Scaling Your Backlink Strategy</li>
+              <li>Optimizing Your Website for Rich Results</li>
+              <li>SEO Reporting</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+          </ul>
+        
+        <ul>
           <li>
             <p>Content Optimization</p>
             <div class="slide-container">
               <img src="images/content-optimization.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
-              <p class="skill">Skills:</p>
-              <ul>
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
               <li>Content Audit</li>
               <li>Content Repurposing</li>
               <li>Content Optimization</li>
@@ -172,8 +193,8 @@ function toggleLanguage() {
             <div class="slide-container">
               <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
-              <p class="skill">Skills:</p>
-              <ul>
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
               <li>Certifications Build a Survey Form</li>
               <li>Build a Tribute Page</li>
               <li>Build a Technical Documentation Page</li>
@@ -190,8 +211,8 @@ function toggleLanguage() {
             <div class="slide-container">
               <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
-              <p class="skill">Skills:</p>
-              <ul>
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
               <li>Build a Palindrome Checker</li>
               <li>Build a Roman Numeral Converter</li>
               <li>Build a Telephone Number Validator</li>
@@ -208,8 +229,8 @@ function toggleLanguage() {
             <div class="slide-container">
               <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
-              <p class="skill">Skills:</p>
-              <ul>
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
               <li>Build a Random Quote Machine</li>
               <li>Build a Markdown Previewer</li>
               <li>Build a Drum Machine</li>
@@ -226,8 +247,8 @@ function toggleLanguage() {
             <div class="slide-container">
               <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
-              <p class="skill">Skills:</p>
-              <ul>
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
               <li>Visualize Data with a Bar Chart</li>
               <li>Visualize Data with a Scatterplot Graph</li>
               <li>Visualize Data with a Heat Map</li>
