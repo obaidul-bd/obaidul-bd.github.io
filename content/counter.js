@@ -33,7 +33,7 @@ function toggleLanguage() {
   <li>  
     <p>কনটেন্ট অপ্টিমাইজেশন</p>  
     <div class="slide-container">  
-      <img src="images/image.png" alt="স্লাইড ইমেজ" class="slide-image">  
+      <img src="images/content-optimization.png" alt="স্লাইড ইমেজ" class="slide-image">  
       <div class="slide-overlay">  
         <p class="skill">দক্ষতা:</p>  
         <ul>  
@@ -53,6 +53,79 @@ function toggleLanguage() {
     </div>  
   </li>  
 </ul>
+<ul>
+  <li>
+    <p>রেসপন্সিভ ওয়েব ডিজাইন</p>
+    <div class="slide-container">
+      <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা:</p>
+        <ul>
+          <li>সার্ভে ফর্ম তৈরি করুন</li>
+          <li>ট্রিবিউট পেজ তৈরি করুন</li>
+          <li>টেকনিক্যাল ডকুমেন্টেশন পেজ তৈরি করুন</li>
+          <li>প্রোডাক্ট ল্যান্ডিং পেজ তৈরি করুন</li>
+          <li>পার্সোনাল পোর্টফোলিও ওয়েবপেজ তৈরি করুন</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+<ul>
+  <li>
+    <p>জাভাস্ক্রিপ্ট অ্যালগরিদম এবং ডাটা স্ট্রাকচার</p>
+    <div class="slide-container">
+      <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা:</p>
+        <ul>
+          <li>প্যালিনড্রোম চেকার তৈরি করুন</li>
+          <li>রোমান নাম্বার কনভার্টার তৈরি করুন</li>
+          <li>টেলিফোন নম্বর ভ্যালিডেটর তৈরি করুন</li>
+          <li>ক্যাশ রেজিস্টার তৈরি করুন</li>
+          <li>পোকেমন সার্চ অ্যাপ তৈরি করুন</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+<ul>
+  <li>
+    <p>ফ্রন্ট এন্ড ডেভেলপমেন্ট লাইব্রেরি</p>
+    <div class="slide-container">
+      <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা:</p>
+        <ul>
+          <li>র্যান্ডম কোট মেশিন তৈরি করুন</li>
+          <li>মার্কডাউন প্রিভিউয়ার তৈরি করুন</li>
+          <li>ড্রাম মেশিন তৈরি করুন</li>
+          <li>জাভাস্ক্রিপ্ট ক্যালকুলেটর তৈরি করুন</li>
+          <li>২৫ + ৫ ক্লক তৈরি করুন</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+<ul>
+  <li>
+    <p>ডাটা ভিজ্যুয়ালাইজেশন</p>
+    <div class="slide-container">
+      <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা:</p>
+        <ul>
+          <li>বার চার্ট দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+          <li>স্ক্যাটারপ্লট গ্রাফ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+          <li>হিট ম্যাপ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+          <li>চোরোপ্লেথ ম্যাপ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+          <li>ট্রিম্যাপ ডায়াগ্রাম দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+
 
         `;
 
@@ -101,17 +174,11 @@ function toggleLanguage() {
               <div class="slide-overlay">
               <p class="skill">Skills:</p>
               <ul>
-              <li>Content Audit</li>
-              <li>Content Repurposing</li>
-              <li>Content Optimization</li>
-              <li>Topical Authority</li>
-              <li>Content Writing</li>
-              <li>Content Planning</li>
-              <li>Surfer Basics</li>
-              <li>Internal Linking</li>
-              <li>SEO Content Strategy</li>
-              <li>SEO ROI</li>
-              <li>On-page SEO</li>
+              <li>Certifications Build a Survey Form</li>
+              <li>Build a Tribute Page</li>
+              <li>Build a Technical Documentation Page</li>
+              <li>Build a Product Landing Page</li>
+              <li>Build a Personal Portfolio Webpage</li>
               </ul>
               </div>
             </div>
@@ -125,17 +192,47 @@ function toggleLanguage() {
               <div class="slide-overlay">
               <p class="skill">Skills:</p>
               <ul>
-              <li>Content Audit</li>
-              <li>Content Repurposing</li>
-              <li>Content Optimization</li>
-              <li>Topical Authority</li>
-              <li>Content Writing</li>
-              <li>Content Planning</li>
-              <li>Surfer Basics</li>
-              <li>Internal Linking</li>
-              <li>SEO Content Strategy</li>
-              <li>SEO ROI</li>
-              <li>On-page SEO</li>
+              <li>Build a Palindrome Checker</li>
+              <li>Build a Roman Numeral Converter</li>
+              <li>Build a Telephone Number Validator</li>
+              <li>Build a Cash Register</li>
+              <li>Build a Pokémon Search App</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+          </ul>
+          <ul>
+          <li>
+            <p>Front End Development Libraries</p>
+            <div class="slide-container">
+              <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills:</p>
+              <ul>
+              <li>Build a Random Quote Machine</li>
+              <li>Build a Markdown Previewer</li>
+              <li>Build a Drum Machine</li>
+              <li>Build a JavaScript Calculator</li>
+              <li>Build a 25 + 5 Clock</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+          </ul>
+          <ul>
+          <li>
+            <p>Data Visualization</p>
+            <div class="slide-container">
+              <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills:</p>
+              <ul>
+              <li>Visualize Data with a Bar Chart</li>
+              <li>Visualize Data with a Scatterplot Graph</li>
+              <li>Visualize Data with a Heat Map</li>
+              <li>Visualize Data with a Choropleth Map</li>
+              <li>Visualize Data with a Treemap Diagram</li>
               </ul>
               </div>
             </div>
