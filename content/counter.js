@@ -258,7 +258,25 @@ function toggleLanguage() {
               </div>
             </div>
           </li>
-          </ul>`;
+          </ul>
+          <ul>
+          <li>
+            <p class="subtitle">Type Achievements</p>
+            <div class="slide-container">
+              <img src="images/type-spreed.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills</p>
+              <ul class="skill-list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              </ul>
+              </div>
+            </div>
+          </li>
+        </ul>`;
 
         button.textContent = 'বাংলায় দেখুন';
         currentLanguage = 'en';
