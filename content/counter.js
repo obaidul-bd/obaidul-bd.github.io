@@ -29,17 +29,34 @@ function toggleLanguage() {
         paragraph2.innerHTML = `SEO শুধু র‍্যাংকিং বাড়ানোর ব্যাপার নয়, এটি দীর্ঘমেয়াদী বৃদ্ধি, দৃশ্যমানতা এবং দর্শকদের আকর্ষণ করার বিষয়। আমি আমার অভিজ্ঞতা ব্যবহার করে আপনার ওয়েবসাইটকে গুগলের নতুন আপডেটগুলোতে মানিয়ে নিতে সহায়তা করব এবং সাদা-হ্যাট SEO পদ্ধতি ব্যবহার করে আপনার সাইটকে দীর্ঘমেয়াদে ভালো ফলাফল পেতে সহায়তা করব।`;
         certificationsTitle.textContent = 'সক্রিয় সার্টিফিকেশনসমূহ:';
         certificationsList.innerHTML = `
-            <li>রেসপন্সিভ ওয়েব-ডিজাইন <a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
-            <li>ফ্রন্ট-এন্ড ডেভেলপার <a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></li>
-            <li>জাভাস্ক্রিপ্ট অ্যালগরিদম এবং ডেটা স্ট্রাকচার <a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></li>
-            <li>ডেটা ভিজ্যুয়ালাইজেশন <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></li>
-            <li>টাইপিং.কম <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></li>
-            <div class='academy-badge'>
-               
-            </div>
+        <ul>  
+  <li>  
+    <p>কনটেন্ট অপ্টিমাইজেশন</p>  
+    <div class="slide-container">  
+      <img src="images/image.png" alt="স্লাইড ইমেজ" class="slide-image">  
+      <div class="slide-overlay">  
+        <p class="skill">দক্ষতা:</p>  
+        <ul>  
+          <li>কনটেন্ট অডিট</li>  
+          <li>কনটেন্ট পুনঃব্যবহার</li>  
+          <li>কনটেন্ট অপ্টিমাইজেশন</li>  
+          <li>টপিক্যাল অথরিটি</li>  
+          <li>কনটেন্ট রাইটিং</li>  
+          <li>কনটেন্ট পরিকল্পনা</li>  
+          <li>সার্ফার বেসিকস</li>  
+          <li>ইন্টারনাল লিঙ্কিং</li>  
+          <li>SEO কনটেন্ট স্ট্র্যাটেজি</li>  
+          <li>SEO ROI</li>  
+          <li>অন-পেজ SEO</li>  
+        </ul>  
+      </div>  
+    </div>  
+  </li>  
+</ul>
+
         `;
 
-        button.textContent = 'ᴇɴ';
+        button.textContent = 'See English';
         currentLanguage = 'bn';
     } else {
         // ইংরেজি ভাষা
@@ -52,18 +69,80 @@ function toggleLanguage() {
         paragraph1.innerHTML = `Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.`;
         paragraph2.innerHTML = `SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.`;
         certificationsTitle.textContent = 'Active Certifications:';
-        certificationsList.innerHTML = `
-                   <li>Responsive Web-Design <a href="https://drive.google.com/file/d/1dg4Msfq6gQr0j1R4tsJjbzQay_qsl2xy/view?usp=sharing" target="_blank">🔗</a></li>
-                   <li>Front End Developer <a href="https://drive.google.com/file/d/1aT2WjtUzIkn2DpbbyxExtY-bGVrM9h90/view?usp=sharing" target="_blank">🔗</a></li>
-                   <li>Javascript Algorithms and Data Structures <a href="https://drive.google.com/file/d/1MnPsJ-dBfl6DATALvois-8hVK1jfQIUQ/view?usp=sharing" target="_blank">🔗</a></li>
-                   <li>Data Visualization <a href="https://drive.google.com/file/d/1GXpvdtl2dPD9cqPpdhB6InSihkku9mHR/view?usp=sharing" target="_blank">🔗</a></li>
-                   <li>Typing.com <a href="https://drive.google.com/file/d/1UCY28AG_NrUwbCNC8iHwvg1RjPXlM_8k/view?usp=sharing" target="_blank">🔗</a></li>
-                   <div class='academy-badge'>
-                       
-                   </div>
-               `;
+        certificationsList.innerHTML = `<ul>
+          <li>
+            <p>Content Optimization</p>
+            <div class="slide-container">
+              <img src="images/content-optimization.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills:</p>
+              <ul>
+              <li>Content Audit</li>
+              <li>Content Repurposing</li>
+              <li>Content Optimization</li>
+              <li>Topical Authority</li>
+              <li>Content Writing</li>
+              <li>Content Planning</li>
+              <li>Surfer Basics</li>
+              <li>Internal Linking</li>
+              <li>SEO Content Strategy</li>
+              <li>SEO ROI</li>
+              <li>On-page SEO</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p>Responsive Web Design</p>
+            <div class="slide-container">
+              <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills:</p>
+              <ul>
+              <li>Content Audit</li>
+              <li>Content Repurposing</li>
+              <li>Content Optimization</li>
+              <li>Topical Authority</li>
+              <li>Content Writing</li>
+              <li>Content Planning</li>
+              <li>Surfer Basics</li>
+              <li>Internal Linking</li>
+              <li>SEO Content Strategy</li>
+              <li>SEO ROI</li>
+              <li>On-page SEO</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p>JavaScript Algorithms and Data Structures</p>
+            <div class="slide-container">
+              <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
+              <div class="slide-overlay">
+              <p class="skill">Skills:</p>
+              <ul>
+              <li>Content Audit</li>
+              <li>Content Repurposing</li>
+              <li>Content Optimization</li>
+              <li>Topical Authority</li>
+              <li>Content Writing</li>
+              <li>Content Planning</li>
+              <li>Surfer Basics</li>
+              <li>Internal Linking</li>
+              <li>SEO Content Strategy</li>
+              <li>SEO ROI</li>
+              <li>On-page SEO</li>
+              </ul>
+              </div>
+            </div>
+          </li>
+          </ul>`;
 
-        button.textContent = '🇧🇳';
+        button.textContent = 'বাংলায় দেখুন';
         currentLanguage = 'en';
     }
     changeLanguage(currentLanguage);
