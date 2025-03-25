@@ -145,7 +145,7 @@ function toggleLanguage() {
         certificationsList.innerHTML = ` 
         <ul>
           <li>
-            <p>Complete SEO</p>
+            <p class="subtitle">Complete SEO</p>
             <div class="slide-container">
               <img src="images/Hubspot-Academy-SEO.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
@@ -165,7 +165,7 @@ function toggleLanguage() {
         
         <ul>
           <li>
-            <p>Content Optimization</p>
+            <p class="subtitle">Content Optimization</p>
             <div class="slide-container">
               <img src="images/content-optimization.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
@@ -189,7 +189,7 @@ function toggleLanguage() {
         </ul>
         <ul>
           <li>
-            <p>Responsive Web Design</p>
+            <p class="subtitle">Responsive Web Design</p>
             <div class="slide-container">
               <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
@@ -207,7 +207,7 @@ function toggleLanguage() {
         </ul>
         <ul>
           <li>
-            <p>JavaScript Algorithms and Data Structures</p>
+            <p class="subtitle">JavaScript Algorithms and Data Structures</p>
             <div class="slide-container">
               <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
@@ -225,7 +225,7 @@ function toggleLanguage() {
           </ul>
           <ul>
           <li>
-            <p>Front End Development Libraries</p>
+            <p class="subtitle">Front End Development Libraries</p>
             <div class="slide-container">
               <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
@@ -243,7 +243,7 @@ function toggleLanguage() {
           </ul>
           <ul>
           <li>
-            <p>Data Visualization</p>
+            <p class="subtitle">Data Visualization</p>
             <div class="slide-container">
               <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
               <div class="slide-overlay">
