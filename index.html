@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
   <link rel="stylesheet" href="assets/config/strl.css" />
+
   <!--google analytics-->
   <meta name="google-site-verification" content="ZFJDq5a2THaMTo2sI_syehJga2nbOPl2VTPOqD38m5c" />
   <!--google analytics-->
@@ -25,129 +26,170 @@
 
   <!-- Google tag (gtag.js) -->
 
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  
   <!--firebase-->
 
   
 
   <!---END firebase-->
-
   <!-- Popup CSS -->
+
   <style>
-        #visitorPopup {
-            position: fixed;
-            top: 20px;  /* উপরের দিকে */
-            right: 20px; /* ডান পাশে */
-            background: rgba(0, 0, 0, 0.8);
-            color: rgb(255, 0, 0);
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-            z-index: 1000;
-            width: 250px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            display: none; /* শুরুতে হাইড থাকবে */
-            animation: fireGlow 1.5s infinite alternate; /* ফায়ার ইফেক্ট */
-        }
-        .popup-content {
-            background: rgb(2, 42, 221);
-            color: black;
-            padding: 15px;
-            border-radius: 10px;
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-            color: red;
-            font-weight: bold;
-        }
+    #visitorPopup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(80, 79, 79, 0.678);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 9999;
+      display: none;
+      text-align: center;
+      max-width: 80%;
+    }
+    #visitorPopup h2 {
+      margin-top: 0;
+    }
+    #visitorPopup button {
+      margin-top: 15px;
+      padding: 8px 15px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 9998;
+      display: none;
+    }
+  </style>
 
-        @keyframes fireGlow {
-            0% {
-          box-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 140, 0, 0.6);
-            }
-            100% {
-          box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 140, 0, 0.8);
-            }
-        }
-</style>
-
+ 
 </head>
 
 <body class="is-preload">
+  <!-- Popup HTML -->
+  <div id="popupOverlay" onclick="closePopup()"></div>
+  <div id="visitorPopup">
+    <h2>Welcome to My Website!</h2>
+    <h3>You are visitor number: <span id="visitorCountDisplay">0</span></h3>
+    <button onclick="closePopup()">Close</button>
+  </div>
 
+  <!-- Your existing website content -->
 
-  <script type="module">
-    // Firebase মডুলার ইমপোর্ট
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAw9fFffBroelsxjfwzM07e9li51_0BJeA",
+      authDomain: "visitor-counter-9b65b.firebaseapp.com",
+      databaseURL: "https://visitor-counter-9b65b-default-rtdb.firebaseio.com",
+      projectId: "visitor-counter-9b65b",
+      storageBucket: "visitor-counter-9b65b.firebasestorage.app",
+      messagingSenderId: "589095550064",
+      appId: "1:589095550064:web:e097054e34d56e3cc048b5",
+      measurementId: "G-X547CT6HGK"
+    };
 
-    // Firebase কনফিগারেশন (আপনার API Key বসান)
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAw9fFffBroelsxjfwzM07e9li51_0BJeA",
-  authDomain: "visitor-counter-9b65b.firebaseapp.com",
-  databaseURL: "https://visitor-counter-9b65b-default-rtdb.firebaseio.com",
-  projectId: "visitor-counter-9b65b",
-  storageBucket: "visitor-counter-9b65b.firebasestorage.app",
-  messagingSenderId: "589095550064",
-  appId: "1:589095550064:web:e097054e34d56e3cc048b5",
-  measurementId: "G-X547CT6HGK"
-};
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    
+    // Get the database service using compat version
+    const database = firebase.database();
 
-    // Firebase ইনিশিয়ালাইজ
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-
-    // ভিজিটর কাউন্ট ফাংশন
+    // Function to update visitor count
     function updateVisitorCount() {
-        const visitorRef = ref(database, 'visitorCount');
-
-        runTransaction(visitorRef, (currentValue) => {
-            return (currentValue || 0) + 1;
-        }).then((snapshot) => {
-            const visitorCount = snapshot.snapshot.val();
+      const visitorRef = database.ref('visitorCount');
+      
+      visitorRef.transaction((currentValue) => {
+        return (currentValue || 0) + 1;
+      }, (error, committed, snapshot) => {
+        if (error) {
+          console.error('Visitor count update failed:', error);
+          // Show popup anyway after 5 seconds with placeholder text
+          setTimeout(() => {
+            showPopup("many");
+          }, 5000);
+        } else if (committed) {
+          const visitorCount = snapshot.val();
+          // Show popup after 5 seconds with actual count
+          setTimeout(() => {
             showPopup(visitorCount);
-        }).catch((error) => {
-            console.error("ভিজিটর কাউন্ট আপডেট করতে ব্যর্থ:", error);
-        });
-    }
-
-    // পপআপ দেখানোর ফাংশন
-    function showPopup(visitorCount) {
-            const popup = document.createElement("div");
-            popup.id = "visitorPopup";
-            popup.innerHTML = `<div class="popup-content">
-                                <button class="close-btn" onclick="document.getElementById('visitorPopup').remove();">✖</button>
-                                <h2>স্বাগতম!</h2>
-                                <p>আপনি আমাদের</p>
-                                <h3>${visitorCount}</h3>
-                                <p>তম ভিজিটর!</p>
-                           </div>`;
-            document.body.appendChild(popup);
-            popup.style.display = "block";
+          }, 5000);
         }
-
-
-    // পপআপ বন্ধ করার ফাংশন
-    function closePopup() {
-        document.getElementById("visitorPopup").remove();
+      });
     }
 
-    // ২ সেকেন্ড পরে পপআপ দেখানো হবে
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(updateVisitorCount, 1000);
-    });
+    // Function to show popup
+    function showPopup(count) {
+      document.getElementById("visitorCountDisplay").textContent = count;
+      document.getElementById("popupOverlay").style.display = "block";
+      document.getElementById("visitorPopup").style.display = "block";
+      startFireworks();
+    }
 
-</script>
+    // Function to close popup
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+      document.getElementById("visitorPopup").style.display = "none";
+      stopFireworks();
+    }
+
+    // Fireworks functions
+    function startFireworks() {
+      // Confetti configuration
+      const duration = 50 * 100000;
+      const end = Date.now() + duration;
+      const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
+      
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+        
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    }
+
+    function stopFireworks() {
+      // Confetti will stop automatically
+    }
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', updateVisitorCount);
+  </script>
 
 
-  <!-- Particles.js container 
+
+
+  <!--
+Particles.js container 
   <div id="tsparticles"></div>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script>
@@ -278,17 +320,6 @@ const firebaseConfig = {
   </script>-->
 
   <!-- End of particles.js container -->
-
-      <!-- পপআপ -->
-      <div id="visitorPopup">
-        <div class="popup-content">
-            <button class="close-btn" onclick="closePopup()">✖</button>
-            <h2>স্বাগতম!</h2>
-            <p>আপনি আমাদের</p>
-            <h3 id="visitorCount">1</h3>
-            <p>তম ভিজিটর!</p>
-        </div>
-      </div>
 
 
   <div class="overlay"></div>
