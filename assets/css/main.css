@@ -7,7 +7,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-
 /* digitalden icon */
 
 .logo {
@@ -30,7 +29,7 @@
 /* digitalden icon END */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, #h2, h3, h4, h5, h6, #myTitle, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -192,11 +191,11 @@ input, select, textarea {
 		font-style: italic;
 	}
 
-	p {
+	#myTitle {
 		margin: 0 0 2rem 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, #h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: 600;
 		line-height: 1.5;
@@ -205,12 +204,12 @@ input, select, textarea {
 		letter-spacing: 0.2rem;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		h1 a, #h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 			text-decoration: none;
 		}
 
-		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+		h1.major, #h2.major, h3.major, h4.major, h5.major, h6.major {
 			border-bottom: solid 1px #ffffff;
 			width: -moz-max-content;
 			width: -webkit-max-content;
@@ -220,7 +219,7 @@ input, select, textarea {
 			margin: 0 0 2rem 0;
 		}
 		
-		h2.major {
+		#h2.major {
 			text-align: center;
 			margin: 0 auto;
 		  }
@@ -231,7 +230,7 @@ input, select, textarea {
 		letter-spacing: 0.5rem;
 	}
 
-	h2 {
+	#h2 {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
@@ -260,7 +259,7 @@ input, select, textarea {
 			line-height: 1.4;
 		}
 
-		h2 {
+		#h2 {
 			font-size: 1.25em;
 			line-height: 1.5;
 		}
@@ -273,11 +272,6 @@ input, select, textarea {
 		top: 0.5rem;
 	}
 
-	sup {
-		font-size: 0.8rem;
-		position: relative;
-		top: -0.5rem;
-	}
 
 	blockquote {
 		border-left: solid 4px #ffffff;
@@ -1297,7 +1291,7 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
-			#header .content p {
+			#header .content #myTitle {
 				text-transform: none;
 				letter-spacing: 0.2rem;
 				font-size: 1.0rem;
@@ -1425,7 +1419,7 @@ input, select, textarea {
 				padding: 2.5rem 1rem;
 			}
 
-			#header .content p {
+			#header .content #myTitle {
 				line-height: 1.875;
 			}
 
@@ -1659,7 +1653,7 @@ ul.icons,
 #header nav ul,
 /* enable this to allow header selection */
 /* #header .inner, */ 
-#footer p {
+#footer #myTitle {
 	pointer-events: auto;
 	user-select: none;
 }
