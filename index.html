@@ -84,9 +84,9 @@
   <!-- Popup HTML -->
   <div id="popupOverlay" onclick="closePopup()"></div>
   <div id="visitorPopup">
-    <h2>Welcome to My Website!</h2>
-    <h3>You are visitor number: <span id="visitorCountDisplay">0</span></h3>
-    <button onclick="closePopup()">Close</button>
+    <h2>স্বাগতম আপনি আমার ওয়েবসাইটের!</h2>
+    <h3>ভিসিটর<span id="visitorCountDisplay">0</span></h3>
+    <button onclick="closePopup()">ধন্যবাদ</button>
   </div>
 
   <!-- Your existing website content -->
@@ -122,13 +122,13 @@
           // Show popup anyway after 5 seconds with placeholder text
           setTimeout(() => {
             showPopup("many");
-          }, 5000);
+          }, 1000);
         } else if (committed) {
           const visitorCount = snapshot.val();
           // Show popup after 5 seconds with actual count
           setTimeout(() => {
             showPopup(visitorCount);
-          }, 5000);
+          }, 1000);
         }
       });
     }
@@ -151,7 +151,7 @@
     // Fireworks functions
     function startFireworks() {
       // Confetti configuration
-      const duration = 50 * 100000;
+      const duration = 5 * 1000;
       const end = Date.now() + duration;
       const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
       

@@ -1,148 +1,212 @@
 let currentLanguage = 'bn';
 
 window.onload = function () {
-    toggleLanguage(); // পেজ লোড হলে ডিফল্ট কন্টেন্ট লোড
+  toggleLanguage(); // পেজ লোড হলে ডিফল্ট কন্টেন্ট লোড
 }
 
 function toggleLanguage() {
-    const name = document.getElementById('myName');
-    const title = document.getElementById('myTitle');
-    const myFooter = document.getElementById('myFooter');
-    const button = document.getElementById('languageButton');
+  const name = document.getElementById('myName');
+  const title = document.getElementById('myTitle');
+  const myFooter = document.getElementById('myFooter');
+  const button = document.getElementById('languageButton');
 
-    // About Section Content
-    const abtitle = document.getElementById('about-title');
-    const paragraph1 = document.getElementById('about-paragraph1');
-    const paragraph2 = document.getElementById('about-paragraph2');
-    const certificationsTitle = document.getElementById('certifications-title');
-    const certificationsList = document.getElementById('certifications-list');
+  // About Section Content
+  const abtitle = document.getElementById('about-title');
+  const paragraph1 = document.getElementById('about-paragraph1');
+  const paragraph2 = document.getElementById('about-paragraph2');
+  const certificationsTitle = document.getElementById('certifications-title');
+  const certificationsList = document.getElementById('certifications-list');
 
-    if (currentLanguage === 'en') {
-        // বাংলা ভাষা
-        name.textContent = 'মোঃ ওবায়দুল হক';
-        title.textContent = 'এসইও স্পেশালিস্ট এবং এডব্লিউএস কন্টেন্ট নির্মাতা';
-        myFooter.textContent = 'ওবায়দুলের দ্বারা তৈরী';
+  if (currentLanguage === 'en') {
+    // বাংলা ভাষা
+    name.textContent = 'মোঃ ওবায়দুল হক';
+    title.textContent = 'এসইও স্পেশালিস্ট এবং এডব্লিউএস কন্টেন্ট নির্মাতা';
+    myFooter.textContent = 'ওবায়দুলের দ্বারা তৈরী';
 
-        // Bengali Content
-        abtitle.textContent = 'আমার সম্পর্কে';
-        paragraph1.innerHTML = `হ্যালো,<br>আমি মোঃ ওবায়দুল হক, একজন সফল ফ্রিল্যান্স SEO বিশেষজ্ঞ যিনি ৫+ বছরের বাস্তব অভিজ্ঞতার মাধ্যমে ব্যবসায়ীদের সার্চ র‍্যাংকিংয়ে আধিপত্য বিস্তার করতে সহায়তা করি। একজন SEO বিশেষজ্ঞ হিসেবে, আমি SEO চ্যালেঞ্জগুলো সমাধান করতে এবং সাদা-হ্যাট কৌশল তৈরি করতে দক্ষ যা দৃশ্যমানতা বৃদ্ধি, অর্গানিক ট্রাফিক বৃদ্ধি এবং কনভার্শন রেট উন্নত করতে সাহায্য করে।`;
-        paragraph2.innerHTML = `SEO শুধু র‍্যাংকিং বাড়ানোর ব্যাপার নয়, এটি দীর্ঘমেয়াদী বৃদ্ধি, দৃশ্যমানতা এবং দর্শকদের আকর্ষণ করার বিষয়। আমি আমার অভিজ্ঞতা ব্যবহার করে আপনার ওয়েবসাইটকে গুগলের নতুন আপডেটগুলোতে মানিয়ে নিতে সহায়তা করব এবং সাদা-হ্যাট SEO পদ্ধতি ব্যবহার করে আপনার সাইটকে দীর্ঘমেয়াদে ভালো ফলাফল পেতে সহায়তা করব।`;
-        certificationsTitle.textContent = 'সক্রিয় সার্টিফিকেশনসমূহ:';
-        certificationsList.innerHTML = `
-        <ul>  
-  <li>  
-    <p>কনটেন্ট অপ্টিমাইজেশন</p>  
-    <div class="slide-container">  
-      <img src="images/content-optimization.png" alt="স্লাইড ইমেজ" class="slide-image">  
-      <div class="slide-overlay">  
-        <p class="skill">দক্ষতা</p>  
-        <ul>  
-          <li>কনটেন্ট অডিট</li>  
-          <li>কনটেন্ট পুনঃব্যবহার</li>  
-          <li>কনটেন্ট অপ্টিমাইজেশন</li>  
-          <li>টপিক্যাল অথরিটি</li>  
-          <li>কনটেন্ট রাইটিং</li>  
-          <li>কনটেন্ট পরিকল্পনা</li>  
-          <li>সার্ফার বেসিকস</li>  
-          <li>ইন্টারনাল লিঙ্কিং</li>  
-          <li>SEO কনটেন্ট স্ট্র্যাটেজি</li>  
-          <li>SEO ROI</li>  
-          <li>অন-পেজ SEO</li>  
-        </ul>  
-      </div>  
-    </div>  
-  </li>  
-</ul>
+    // বাংলা কনটেন্ট
+    abtitle.textContent = 'সম্পর্কিত';
+    paragraph1.innerHTML = `হ্যালো,<br>আমি মোঃ ওবায়দুল হক, একজন সফল ফ্রিল্যান্স SEO বিশেষজ্ঞ, যার ৫+ বছরের বাস্তব অভিজ্ঞতা রয়েছে ব্যবসাগুলোকে সার্চ র‍্যাঙ্কিংয়ে শীর্ষে নিয়ে যেতে সাহায্য করার। একজন SEO এক্সপার্ট হিসেবে, আমি SEO সংক্রান্ত চ্যালেঞ্জ সমাধান এবং সাদা টুপি (White Hat) কৌশল তৈরি করতে দক্ষ, যা দৃশ্যমানতা বৃদ্ধি, অর্গানিক ট্রাফিক বাড়ানো এবং কনভার্সন রেট উন্নত করতে সাহায্য করে।`;
+
+    paragraph2.innerHTML = `SEO শুধুমাত্র র‍্যাঙ্কিং বাড়ানোর জন্য নয়, এটি দীর্ঘমেয়াদী বৃদ্ধি, দৃশ্যমানতা এবং দর্শকদের আকৃষ্ট করার ব্যাপার। আমি আমার অভিজ্ঞতা ব্যবহার করে আপনার ওয়েবসাইটকে গুগলের নতুন আপডেটের সাথে খাপ খাওয়াতে সহায়তা করব এবং সাদা টুপি (White Hat) SEO পদ্ধতি ব্যবহার করব যাতে আপনার সাইট দীর্ঘ সময়ের জন্য ভালো ফলাফল পায়।`;
+
+    certificationsTitle.textContent = 'সক্রিয় সার্টিফিকেশন:';
+    certificationsList.innerHTML = ` 
 <ul>
   <li>
-    <p>রেসপন্সিভ ওয়েব ডিজাইন</p>
+    <p class="subtitle">সম্পূর্ণ SEO</p>
     <div class="slide-container">
-      <img src="images/web-dejaner-certifies.png" alt="Slide Image" class="slide-image">
+      <img src="images/Hubspot-Academy-SEO.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
       <div class="slide-overlay">
         <p class="skill">দক্ষতা</p>
-        <ul>
-          <li>সার্ভে ফর্ম তৈরি করুন</li>
-          <li>ট্রিবিউট পেজ তৈরি করুন</li>
-          <li>টেকনিক্যাল ডকুমেন্টেশন পেজ তৈরি করুন</li>
-          <li>প্রোডাক্ট ল্যান্ডিং পেজ তৈরি করুন</li>
-          <li>পার্সোনাল পোর্টফোলিও ওয়েবপেজ তৈরি করুন</li>
-        </ul>
-      </div>
-    </div>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>জাভাস্ক্রিপ্ট অ্যালগরিদম এবং ডাটা স্ট্রাকচার</p>
-    <div class="slide-container">
-      <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="Slide Image" class="slide-image">
-      <div class="slide-overlay">
-        <p class="skill">দক্ষতা</p>
-        <ul>
-          <li>প্যালিনড্রোম চেকার তৈরি করুন</li>
-          <li>রোমান নাম্বার কনভার্টার তৈরি করুন</li>
-          <li>টেলিফোন নম্বর ভ্যালিডেটর তৈরি করুন</li>
-          <li>ক্যাশ রেজিস্টার তৈরি করুন</li>
-          <li>পোকেমন সার্চ অ্যাপ তৈরি করুন</li>
-        </ul>
-      </div>
-    </div>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>ফ্রন্ট এন্ড ডেভেলপমেন্ট লাইব্রেরি</p>
-    <div class="slide-container">
-      <img src="images/Front-End-Development-Libraries.png" alt="Slide Image" class="slide-image">
-      <div class="slide-overlay">
-        <p class="skill">দক্ষতা</p>
-        <ul>
-          <li>র্যান্ডম কোট মেশিন তৈরি করুন</li>
-          <li>মার্কডাউন প্রিভিউয়ার তৈরি করুন</li>
-          <li>ড্রাম মেশিন তৈরি করুন</li>
-          <li>জাভাস্ক্রিপ্ট ক্যালকুলেটর তৈরি করুন</li>
-          <li>২৫ + ৫ ক্লক তৈরি করুন</li>
-        </ul>
-      </div>
-    </div>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>ডাটা ভিজ্যুয়ালাইজেশন</p>
-    <div class="slide-container">
-      <img src="images/Data-Visualization.png" alt="Slide Image" class="slide-image">
-      <div class="slide-overlay">
-        <p class="skill">দক্ষতা</p>
-        <ul>
-          <li>বার চার্ট দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
-          <li>স্ক্যাটারপ্লট গ্রাফ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
-          <li>হিট ম্যাপ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
-          <li>চোরোপ্লেথ ম্যাপ দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
-          <li>ট্রিম্যাপ ডায়াগ্রাম দিয়ে ডাটা ভিজ্যুয়ালাইজ করুন</li>
+        <ul class="skill-list">
+          <li>SEO এর মৌলিক বিষয়</li>
+          <li>অন-পেজ এবং টেকনিক্যাল SEO</li>
+          <li>SEO-এর জন্য কীওয়ার্ড গবেষণা</li>
+          <li>লিংক বিল্ডিং: ব্যাকলিংক কৌশল বিস্তৃত করা</li>
+          <li>ওয়েবসাইট অপ্টিমাইজেশন রিচ রেজাল্টের জন্য</li>
+          <li>SEO রিপোর্টিং</li>
         </ul>
       </div>
     </div>
   </li>
 </ul>
 
+<ul>
+  <li>
+    <p class="subtitle">কনটেন্ট অপ্টিমাইজেশন</p>
+    <div class="slide-container">
+      <img src="images/content-optimization.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li>কনটেন্ট অডিট</li>
+          <li>কনটেন্ট রিপারপোজিং</li>
+          <li>কনটেন্ট অপ্টিমাইজেশন</li>
+          <li>টপিক্যাল অথরিটি</li>
+          <li>কনটেন্ট রাইটিং</li>
+          <li>কনটেন্ট প্ল্যানিং</li>
+          <li>সার্ফার বেসিক</li>
+          <li>ইন্টারনাল লিংকিং</li>
+          <li>SEO কনটেন্ট স্ট্র্যাটেজি</li>
+          <li>SEO ROI</li>
+          <li>অন-পেজ SEO</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
 
-        `;
+<ul>
+  <li>
+    <p class="subtitle">রেসপনসিভ ওয়েব ডিজাইন</p>
+    <div class="slide-container">
+      <img src="images/web-dejaner-certifies.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li>সার্ভে ফর্ম তৈরি করা</li>
+          <li>ট্রিবিউট পেজ তৈরি করা</li>
+          <li>টেকনিক্যাল ডকুমেন্টেশন পেজ তৈরি করা</li>
+          <li>প্রোডাক্ট ল্যান্ডিং পেজ তৈরি করা</li>
+          <li>পার্সোনাল পোর্টফোলিও ওয়েবপেজ তৈরি করা</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
 
-        button.textContent = 'See English';
-        currentLanguage = 'bn';
-    } else {
-        // ইংরেজি ভাষা
-        name.textContent = 'Md Obaidul Islam';
-        title.textContent = 'SEO Specialist & AWS Content Creator';
-        myFooter.textContent = 'Made with❤️|MD OBAIDUL HAQUE';
+<ul>
+  <li>
+    <p class="subtitle">জাভাস্ক্রিপ্ট অ্যালগরিদম এবং ডাটা স্ট্রাকচার</p>
+    <div class="slide-container">
+      <img src="images/JavaScript-Algorithms-and Data Structures.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li>Palindrome চেকার তৈরি করা</li>
+          <li>রোমান নাম্বার কনভার্টার তৈরি করা</li>
+          <li>টেলিফোন নাম্বার ভ্যালিডেটর তৈরি করা</li>
+          <li>ক্যাশ রেজিস্টার তৈরি করা</li>
+          <li>পোকেমন সার্চ অ্যাপ তৈরি করা</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
 
-        // English Content
-        abtitle.textContent = 'About';
-        paragraph1.innerHTML = `Hi,<br>I am Md.Obaidul Haque, a successful freelance SEO specialist with 5+ years of practical experience helping businesses dominate search rankings. As an SEO expert, I excel at solving SEO challenges and developing white hat strategies that increase visibility, boost organic traffic, and improve conversion rates.`;
-        paragraph2.innerHTML = `SEO is not just about increasing rankings, it's about long-time growth, visibility, and attracting visitors. I will use my experience to help your website adapt to Google's new updates and use white-hat SEO methods so that your site gets good results in the long-time.`;
-        certificationsTitle.textContent = 'Active Certifications:';
-        certificationsList.innerHTML = ` 
+<ul>
+  <li>
+    <p class="subtitle">ফ্রন্ট-এন্ড ডেভেলপমেন্ট লাইব্রেরি</p>
+    <div class="slide-container">
+      <img src="images/Front-End-Development-Libraries.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li>র‍্যান্ডম কোট মেশিন তৈরি করা</li>
+          <li>মার্কডাউন প্রিভিউয়ার তৈরি করা</li>
+          <li>ড্রাম মেশিন তৈরি করা</li>
+          <li>জাভাস্ক্রিপ্ট ক্যালকুলেটর তৈরি করা</li>
+          <li>২৫ + ৫ ক্লক তৈরি করা</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <p class="subtitle">ডাটা ভিজুয়ালাইজেশন</p>
+    <div class="slide-container">
+      <img src="images/Data-Visualization.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li>বার চার্টের মাধ্যমে ডাটা ভিজুয়ালাইজ করা</li>
+          <li>স্ক্যাটারপ্লট গ্রাফের মাধ্যমে ডাটা ভিজুয়ালাইজ করা</li>
+          <li>হিট ম্যাপের মাধ্যমে ডাটা ভিজুয়ালাইজ করা</li>
+          <li>ক্লোরোপ্লেথ ম্যাপের মাধ্যমে ডাটা ভিজুয়ালাইজ করা</li>
+          <li>ট্রি ম্যাপ ডায়াগ্রামের মাধ্যমে ডাটা ভিজুয়ালাইজ করা</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <p class="subtitle">টাইপিং অর্জন</p>
+    <div class="slide-container">
+      <img src="images/type-spreed.png" alt="সার্টিফিকেট ইমেজ" class="slide-image">
+      <div class="slide-overlay">
+        <p class="skill">দক্ষতা</p>
+        <ul class="skill-list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>`;
+
+
+    button.textContent = 'See English';
+    currentLanguage = 'bn';
+  } else {
+    // ইংরেজি ভাষা
+    name.textContent = 'Md Obaidul Haque';
+    title.textContent = 'SEO Specialist & Full Stack Developer';
+    myFooter.textContent = 'Made with❤️|MD OBAIDUL HAQUE';
+
+    // English Content
+// H1 - Page Title
+abtitle.textContent = 'Boost Your Rankings with Obaidul BD';
+
+// H2 - About Section
+paragraph1.innerHTML = `
+<h2>About Obaidul BD</h2>
+<p>Hi,<br>I’m Md. Obaidul Haque, a successful freelance SEO specialist at <strong>Obaidul BD</strong> with over 5 years of practical experience boosting rankings and driving traffic! As an SEO expert, I excel at solving challenges and crafting white-hat strategies that increase visibility, boost organic traffic, and improve conversion rates.</p>
+`;
+
+// H2 - Services Section
+paragraph2.innerHTML = `
+<h2>Professional SEO Services by Obaidul BD – Boost Rankings & Drive Traffic!</h2>
+<p><strong>SEO is more than just rankings</strong>—it’s about long-term growth, visibility, and attracting the right visitors. At <strong>Obaidul BD</strong>, I leverage my expertise to help your website adapt to Google’s latest updates, using white-hat SEO methods for lasting results.</p>
+<p>Looking to rank higher on Google and bring more customers to your business? I’m an experienced SEO specialist dedicated to helping businesses like yours increase visibility, attract quality traffic, and grow revenue with proven strategies.</p>
+<p>Here’s what I offer:</p>
+<ul>
+    <li>✅ <strong>On-Page SEO</strong> – Optimize content, meta tags, and site structure.</li>
+    <li>✅ <strong>Off-Page SEO</strong> – High-quality backlinks for authority and trust.</li>
+    <li>✅ <strong>Monthly SEO</strong> – Continuous optimization and performance tracking.</li>
+    <li>✅ <strong>Local SEO</strong> – Dominate Google Maps and local search results.</li>
+</ul>
+<p>🔍 <strong>100% White-Hat Techniques</strong> | Fast, Effective Results | Transparent Reporting</p>
+<p><strong>Ready to outperform your competition?</strong> Let’s take your site to the top with <strong>Obaidul BD</strong>! 🚀</p>
+`;
+    certificationsTitle.textContent = 'Active Certifications:';
+    certificationsList.innerHTML = ` 
         <ul>
           <li>
             <p class="subtitle">Complete SEO</p>
@@ -278,15 +342,15 @@ function toggleLanguage() {
           </li>
         </ul>`;
 
-        button.textContent = 'বাংলায় দেখুন';
-        currentLanguage = 'en';
-    }
-    changeLanguage(currentLanguage);
+    button.textContent = 'বাংলায় দেখুন';
+    currentLanguage = 'en';
+  }
+  changeLanguage(currentLanguage);
 }
 
 function changeLanguage(lang) {
-    console.log("Language changed to:", lang);
-    // Add your language change logic here
+  console.log("Language changed to:", lang);
+  // Add your language change logic here
 }
 
 
