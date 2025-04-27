@@ -22,13 +22,9 @@
 
 ## 🖼 Project Screenshots
 
-| Desktop View | Mobile View |
-|--------------|-------------|
-| ![Desktop](https://via.placeholder.com/600x400?text=Desktop+View) | ![Mobile](https://via.placeholder.com/300x500?text=Mobile+View) |
-
-## 🎥 Demo GIF
-
-![Website Demo](https://via.placeholder.com/600x400.gif?text=Website+Demo+GIF)
+| All devaice View |
+|--------------|
+| ![Desktop](https://ucarecdn.com/d3010d26-fe1c-4422-b6a7-0b4232f667c5/MdObaidulHaque.png) |
 
 ## Architectural Overview
 
