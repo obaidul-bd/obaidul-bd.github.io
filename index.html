@@ -12,14 +12,14 @@
 
     // Initialize Firebase
     const app = firebase.initializeApp(firebaseConfig);
-    
+
     // Get the database service using compat version
     const database = firebase.database();
 
     // Function to update visitor count
     function updateVisitorCount() {
       const visitorRef = database.ref('visitorCount');
-      
+
       visitorRef.transaction((currentValue) => {
         return (currentValue || 0) + 1;
       }, (error, committed, snapshot) => {
@@ -47,48 +47,48 @@
       startFireworks();
     }
     function startFireworks() {
-    // Simple fireworks implementation
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    container.style.zIndex = '9999';
-    document.body.appendChild(container);
+      // Simple fireworks implementation
+      const container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.top = '0';
+      container.style.left = '0';
+      container.style.width = '100%';
+      container.style.height = '100%';
+      container.style.pointerEvents = 'none';
+      container.style.zIndex = '9999';
+      document.body.appendChild(container);
 
-    for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 50; i++) {
         setTimeout(() => {
-            const firework = document.createElement('div');
-            firework.style.position = 'absolute';
-            firework.style.width = '5px';
-            firework.style.height = '5px';
-            firework.style.borderRadius = '50%';
-            firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            firework.style.left = `${Math.random() * 100}%`;
-            firework.style.top = `${Math.random() * 100}%`;
-            firework.style.boxShadow = '0 0 10px 2px currentColor';
-            container.appendChild(firework);
+          const firework = document.createElement('div');
+          firework.style.position = 'absolute';
+          firework.style.width = '5px';
+          firework.style.height = '5px';
+          firework.style.borderRadius = '50%';
+          firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+          firework.style.left = `${Math.random() * 100}%`;
+          firework.style.top = `${Math.random() * 100}%`;
+          firework.style.boxShadow = '0 0 10px 2px currentColor';
+          container.appendChild(firework);
 
-            // Animate
-            const animation = firework.animate([
-                { transform: 'scale(1)', opacity: 1 },
-                { transform: 'scale(3)', opacity: 0 }
-            ], {
-                duration: 1000 + Math.random() * 1000,
-                easing: 'cubic-bezier(0,0,0.2,1)'
-            });
+          // Animate
+          const animation = firework.animate([
+            { transform: 'scale(1)', opacity: 1 },
+            { transform: 'scale(3)', opacity: 0 }
+          ], {
+            duration: 1000 + Math.random() * 1000,
+            easing: 'cubic-bezier(0,0,0.2,1)'
+          });
 
-            animation.onfinish = () => firework.remove();
+          animation.onfinish = () => firework.remove();
         }, i * 100);
-    }
+      }
 
-    // Remove container after animation completes
-    setTimeout(() => {
+      // Remove container after animation completes
+      setTimeout(() => {
         container.remove();
-    }, 6000);
-}
+      }, 6000);
+    }
 
     // Function to close popup
     function closePopup() {
@@ -96,33 +96,33 @@
       document.getElementById("visitorPopup").style.display = "none";
       stopFireworks();
     }
-   // Fireworks functions
+    // Fireworks functions
 
-   var duration = 30 * 100;
-var animationEnd = Date.now() + duration;
-var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10 };
+    var duration = 30 * 100;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10 };
 
-function randomInRange(min, max) {
-  return Math.random() * (max - min) + min;
-}
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
 
-var interval = setInterval(function() {
-  var timeLeft = animationEnd - Date.now();
+    var interval = setInterval(function () {
+      var timeLeft = animationEnd - Date.now();
 
-  if (timeLeft <= 0) {
-    return clearInterval(interval);
-  }
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
 
-  var particleCount = 50 * (timeLeft / duration);
-  // since particles fall down, start a bit higher than random
-  confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-  confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-}, 250);
+      var particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
     function stopFireworks() {
       // Confetti will stop automatically
     }
 
-//stopFireworks function
+    //stopFireworks function
     function stopFireworks() {
       // Confetti will stop automatically
     }

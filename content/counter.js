@@ -1,36 +1,7 @@
-let currentLanguage = 'bn';
-
-window.onload = function () {
-  toggleLanguage(); // পেজ লোড হলে ডিফল্ট কন্টেন্ট লোড
-}
-
-function toggleLanguage() {
-  const name = document.getElementById('myName');
-  const title = document.getElementById('myTitle');
-  const myFooter = document.getElementById('myFooter');
-  const button = document.getElementById('languageButton');
-
-  // About Section Content
-  const abtitle = document.getElementById('about-title');
-  const paragraph1 = document.getElementById('about-paragraph1');
-  const paragraph2 = document.getElementById('about-paragraph2');
-  const certificationsTitle = document.getElementById('certifications-title');
-  const certificationsList = document.getElementById('certifications-list');
-
-  if (currentLanguage === 'en') {
-    // বাংলা ভাষা
-    name.textContent = 'মোঃ ওবায়দুল হক';
-    title.textContent = 'এসইও স্পেশালিস্ট এবং organic Growth';
-    myFooter.textContent = 'ওবায়দুলের দ্বারা তৈরী';
-
-    // বাংলা কনটেন্ট
-    paragraph1.innerHTML = `
+let currentLanguage="bn";function toggleLanguage(){let i=document.getElementById("myName"),l=document.getElementById("myTitle"),s=document.getElementById("myFooter"),e=document.getElementById("languageButton"),t=document.getElementById("about-title"),a=document.getElementById("about-paragraph1"),n=document.getElementById("about-paragraph2"),r=document.getElementById("certifications-title"),o=document.getElementById("certifications-list");"en"===currentLanguage?(i.textContent="মোঃ ওবায়দুল হক",l.textContent="এসইও স্পেশালিস্ট এবং organic Growth",s.textContent="ওবায়দুলের দ্বারা তৈরী",a.innerHTML=`
     <h2>ওবায়দুল বিডি সম্পর্কে</h2>
     <p>হ্যালো,<br>আমি মোঃ ওবায়দুল হক, <strong>ওবায়দুল বিডি</strong>-এর একজন সফল ফ্রিল্যান্স এসইও স্পেশালিস্ট। ৫ বছরের বেশি বাস্তব অভিজ্ঞতা নিয়ে আমি ওয়েবসাইটের র‍্যাংকিং বৃদ্ধি ও ট্রাফিক বাড়ানোর কাজ করছি! একজন এসইও বিশেষজ্ঞ হিসেবে, আমি চ্যালেঞ্জ মোকাবিলা ও হোয়াইট-হ্যাট কৌশল তৈরি করতে দক্ষ, যা ওয়েবসাইটের দৃশ্যমানতা বৃদ্ধি, অর্গানিক ট্রাফিক বাড়ানো এবং কনভার্সন রেট উন্নত করতে সহায়তা করে।</p>
-    `;
-    
-    // H2 - সার্ভিস বিভাগ
-    paragraph2.innerHTML = `
+    `,n.innerHTML=`
     <h2>ওবায়দুল বিডি-এর পেশাদার এসইও সেবা – র‍্যাংকিং বৃদ্ধি করুন ও ট্রাফিক বাড়ান!</h2>
     <p><strong>এসইও শুধুমাত্র র‍্যাংকিং নয়</strong>—এটি দীর্ঘমেয়াদী বৃদ্ধি, দৃশ্যমানতা এবং সঠিক দর্শকদের আকৃষ্ট করার বিষয়। <strong>ওবায়দুল বিডি</strong>-এ আমি আমার দক্ষতা ব্যবহার করে আপনার ওয়েবসাইটকে গুগলের সর্বশেষ আপডেটের সাথে মানিয়ে নিতে সাহায্য করি, দীর্ঘস্থায়ী ফলাফলের জন্য হোয়াইট-হ্যাট এসইও কৌশল প্রয়োগ করি।</p>
     <p>আপনার ব্যবসাকে আরও বেশি গ্রাহকের কাছে পৌঁছাতে এবং গুগলে উচ্চ র‍্যাংকিং পেতে চান? আমি একজন অভিজ্ঞ এসইও বিশেষজ্ঞ, যারা আপনার ওয়েবসাইটের দৃশ্যমানতা বৃদ্ধি, গুণগত মানসম্পন্ন ট্রাফিক আকর্ষণ এবং নিশ্চিত ফলাফল দিয়ে আয় বাড়ানোর জন্য কাজ করি।</p>
@@ -43,11 +14,7 @@ function toggleLanguage() {
     </ul>
     <p>🔍 <strong>১০০% হোয়াইট-হ্যাট কৌশল</strong> | দ্রুত ও কার্যকরী ফলাফল | স্বচ্ছ রিপোর্টিং</p>
     <p><strong>প্রতিযোগীদের পেছনে ফেলতে প্রস্তুত?</strong> <strong>ওবায়দুল বিডি</strong> এর সাথে আপনার ওয়েবসাইটকে শীর্ষে নিয়ে যান! 🚀</p>
-    `
-    
-
-    certificationsTitle.textContent = 'সক্রিয় সার্টিফিকেশন:';
-    certificationsList.innerHTML = ` 
+    `,r.textContent="সক্রিয় সার্টিফিকেশন:",o.innerHTML=` 
 <ul>
   <li>
     <p class="subtitle">সম্পূর্ণ SEO</p>
@@ -186,29 +153,10 @@ function toggleLanguage() {
       </div>
     </div>
   </li>
-</ul>`;
-
-
-    button.textContent = 'See English';
-    currentLanguage = 'bn';
-  } else {
-    // ইংরেজি ভাষা
-    name.textContent = 'Md Obaidul Haque';
-    title.textContent = 'Top SEO Specialist for organic Growth';
-    myFooter.textContent = 'Made with❤️|MD OBAIDUL HAQUE';
-
-    // English Content
-// H1 - Page Title
-abtitle.textContent = 'Top SEO Specialist for organic Growth';
-
-// H2 - About Section
-paragraph1.innerHTML = `
+</ul>`,e.textContent="See English",currentLanguage="bn"):(i.textContent="Md Obaidul Haque",l.textContent="Top SEO Specialist for organic Growth",s.textContent="Made with❤️|MD OBAIDUL HAQUE",t.textContent="Top SEO Specialist for organic Growth",a.innerHTML=`
 <h2>About Obaidul BD</h2>
 <p>Hi,<br>I’m Md. Obaidul Haque, a successful freelance SEO specialist at <strong>Obaidul BD</strong> with over 5 years of practical experience boosting rankings and driving traffic! As an SEO expert, I excel at solving challenges and crafting white-hat strategies that increase visibility, boost organic traffic, and improve conversion rates.</p>
-`;
-
-// H2 - Services Section
-paragraph2.innerHTML = `
+`,n.innerHTML=`
 <h2>Professional SEO Services by Obaidul BD – Boost Rankings & Drive Traffic!</h2>
 <p><strong>SEO is more than just rankings</strong>—it’s about long-term growth, visibility, and attracting the right visitors. At <strong>Obaidul BD</strong>, I leverage my expertise to help your website adapt to Google’s latest updates, using white-hat SEO methods for lasting results.</p>
 <p>Looking to rank higher on Google and bring more customers to your business? I’m an experienced SEO specialist dedicated to helping businesses like yours increase visibility, attract quality traffic, and grow revenue with proven strategies.</p>
@@ -221,9 +169,7 @@ paragraph2.innerHTML = `
 </ul>
 <p>🔍 <strong>100% White-Hat Techniques</strong> | Fast, Effective Results | Transparent Reporting</p>
 <p><strong>Ready to outperform your competition?</strong> Let’s take your site to the top with <strong>Obaidul BD</strong>! 🚀</p>
-`;
-    certificationsTitle.textContent = 'Active Certifications:';
-    certificationsList.innerHTML = ` 
+`,r.textContent="Active Certifications:",o.innerHTML=` 
         <ul>
           <li>
             <p class="subtitle">Complete SEO</p>
@@ -298,7 +244,7 @@ paragraph2.innerHTML = `
               <li>Build a Roman Numeral Converter</li>
               <li>Build a Telephone Number Validator</li>
               <li>Build a Cash Register</li>
-              <li>Build a Pokémon Search App</li>
+              <li>Build a Pok\xe9mon Search App</li>
               </ul>
               </div>
             </div>
@@ -357,18 +303,4 @@ paragraph2.innerHTML = `
               </div>
             </div>
           </li>
-        </ul>`;
-
-    button.textContent = 'বাংলায় দেখুন';
-    currentLanguage = 'en';
-  }
-  changeLanguage(currentLanguage);
-}
-
-function changeLanguage(lang) {
-  console.log("Language changed to:", lang);
-  // Add your language change logic here
-}
-
-
-
+        </ul>`,e.textContent="বাংলায় দেখুন",currentLanguage="en"),changeLanguage(currentLanguage)}function changeLanguage(i){console.log("Language changed to:",i)}window.onload=function(){toggleLanguage()};
