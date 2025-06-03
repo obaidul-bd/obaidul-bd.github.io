@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://obaidul-bd.github.io/content/side-map.xml
